@@ -342,6 +342,7 @@ If you want to save it in bower.json file, remember to add flag --save
         index = Number(suggestionsMenu.indexOf(selectedItem));
         this.inputValue = this._suggestions[index];
         this._suggestions = [];
+        this.selected = this.results[index];
         this.fire('pt-item-confirmed',e.target);
         e.stopPropagation();
       }
@@ -388,6 +389,7 @@ If you want to save it in bower.json file, remember to add flag --save
             index = Number(suggestionsMenu.indexOf(selectedItem));
             this.inputValue = this._suggestions[index];
             this._suggestions = [];
+            this.selected = this.results[index];
             this.fire('pt-item-confirmed',selectedItem);
           }
         }
